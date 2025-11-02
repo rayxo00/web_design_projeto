@@ -1,48 +1,127 @@
-body{
-    background-image:url(img/fundo.png);
-    font-family: 'Pixelify Sans', sans-serif;
-}
-
-#tudo{
-    background-color: rgb(248, 201, 209);
-}
-
-#header{
-    background-color: rgb(253, 253, 252);
- display: flex;
-  justify-content: space-between; /* Centraliza horizontalmente */
-  align-items: center;     /* Centraliza verticalmente */
-  list-style: none;
-  padding: 0;
-  font-family: 'Pixelify Sans', sans-serif ;
+body {
+  margin: 0;
+  font-family: "Pixelify Sans", sans-serif;
+  background-image: url(img/fundo.png);
+ padding: 2%;
  
-
 }
 
-#banner{
-    border: black 3px;
-    background-color: white;
-    width: 100%;      
-    height: auto;     
+/* Caixa principal */
+#tudo {
+    background-color: #e65447;
 }
 
-#conteudo{
-    background-color: white;
+/* Header */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 25px;
+  background-color: #fff1f8;
+  color: #b11628;
+    
 }
 
-a{
-    text-decoration: none;
-    color: #b2192c;
+#header img {
+  image-rendering: pixelated;
 }
 
-ul{
-    list-style: none;
-    display: flex;
-  gap: 20px; 
-   margin-right: 2%;
+.itensMenu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
 }
 
-.titulo{
-    background-color: #b2192c;
-    color: white;
+.itensMenu a {
+  text-decoration: none;
+  color: #b11628;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.itensMenu a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* Banner */
+#banner img {
+  margin-top: 0;
+  
+  
+}
+
+/* Conteúdo */
+#conteudo {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 30px;
+  align-items: flex-start;
+}
+
+/* Colunas */
+.coluna {
+  flex: 1;
+  background-color: #fff1f8;
+  padding: 0 20px 20px 20px;
+  border: 2px solid #b11628;
+  border-radius: 6px;
+  box-shadow: 3px 3px 0px #5c0c15;
+
+  padding: 0;
+  overflow: hidden;
+}
+
+.texto{
+    padding: 0 20px;
+}
+
+.coluna:first-child {
+  flex: 3; /* maior */
+}
+
+/* Segunda coluna menor */
+.coluna:last-child {
+  flex: 1; /* menor */
+}
+
+/* Títulos */
+.titulo {
+  display: block;
+    width: 100%;
+    margin: 0;
+    padding: 12px 0;
+
+  font-size: 22px;
+  margin-bottom: 15px;
+  background-color: #b2192c;
+  color: white;
+  text-align: center;
+
+  border-radius: 2px 2px 0 0;
+  
+}
+
+/* Lista */
+ul {
+  padding: 20px;
+  margin-top: 10px;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #b11628;
+  transition: 0.2s;
+}
+
+ul li a:hover {
+  color: #f78e52;
+  transform: translateX(4px);
 }
