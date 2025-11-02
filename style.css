@@ -1,0 +1,45 @@
+body{
+    background-image:url(img/image.png);
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+#tudo{
+    background-color: rgb(248, 201, 209);
+}
+
+#header{
+    background-color: rgb(253, 253, 252);
+ display: flex;
+  justify-content: space-between; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  list-style: none;
+  padding: 0;
+  font-family: 'Pixelify Sans', sans-serif ;
+
+}
+
+#banner{
+    border: black 3px;
+    background-color: white;
+    width: 100%;      
+    height: auto;     
+}
+
+#conteudo{
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+  gap: 20px; 
+}
+
+.titulo{
+    background-color: #b2192c;
+    color: white;
+}
