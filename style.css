@@ -6,12 +6,12 @@ body {
  
 }
 
-/* Caixa principal */
+
 #tudo {
     background-color: #e65447;
 }
 
-/* Header */
+
 #header {
   display: flex;
   align-items: center;
@@ -51,7 +51,7 @@ body {
   
 }
 
-/* Conteúdo */
+
 #conteudo {
   display: flex;
   justify-content: space-between;
@@ -60,7 +60,7 @@ body {
   align-items: flex-start;
 }
 
-/* Colunas */
+
 .coluna {
   flex: 1;
   background-color: #fff1f8;
@@ -78,15 +78,15 @@ body {
 }
 
 .coluna:first-child {
-  flex: 3; /* maior */
+  flex: 3; 
 }
 
-/* Segunda coluna menor */
+
 .coluna:last-child {
-  flex: 1; /* menor */
+  flex: 1; 
 }
 
-/* Títulos */
+
 .titulo {
   display: block;
     width: 100%;
@@ -103,7 +103,7 @@ body {
   
 }
 
-/* Lista */
+
 ul {
   padding: 20px;
   margin-top: 10px;
