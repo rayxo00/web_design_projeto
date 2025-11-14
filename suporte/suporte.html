@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suporte</title>
     <link rel="stylesheet" href="suporte.css">
-     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Pixelify Sans'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Pixelify Sans'>
 </head>
 <body>
-    
-     <div id="header">
+    <div id="header">
         <img src="../img/iconchat.png" alt="chat icon" style="width: 5%; height: auto;">
         <ul class="itensMenu">
             <li><a href="../index.html"><b>Home</b></a></li>
@@ -17,5 +16,108 @@
             <li><a href="../suporte/suporte.html"><b>Suporte</b></a></li>
         </ul>
     </div>
+
+    <div id="conteudo-principal">
+        <div class="container-suporte">
+            <h1 class="titulo-pagina">Central de Suporte</h1>
+            <p class="subtitulo">Estamos aqui para ajudar! Entre em contato conosco ou consulte nossas perguntas frequentes.</p>
+
+            <div class="secao-formulario">
+                <h2 class="titulo-secao">📧 Envie sua mensagem</h2>
+                <form id="form-contato" class="formulario-contato">
+                    <div class="campo-form">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="duvida">Dúvida sobre o site</option>
+                            <option value="sugestao">Sugestão de livro</option>
+                            <option value="problema">Reportar problema técnico</option>
+                            <option value="parceria">Proposta de parceria</option>
+                            <option value="outro">Outro assunto</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar mensagem</button>
+                </form>
+
+                <div id="mensagem-sucesso" class="mensagem-sucesso" style="display: none;">
+                    <p>✅ Mensagem enviada com sucesso! Responderemos em breve.</p>
+                </div>
+            </div>
+
+            <div class="secao-faq">
+                <h2 class="titulo-secao">❓ Perguntas Frequentes</h2>
+                
+                <div class="pergunta-item">
+                    <h3 class="pergunta">Como funciona o site?</h3>
+                    <p class="resposta">O Dreamy Pages é um blog literário onde você pode explorar diferentes gêneros de livros, ler resumos, ver comentários de outros leitores e adicionar livros aos seus favoritos.</p>
+                </div>
+
+                <div class="pergunta-item">
+                    <h3 class="pergunta">Como adiciono livros aos favoritos?</h3>
+                    <p class="resposta">Navegue pelas páginas de cada tema, encontre o livro desejado e clique no ícone de estrela. Os livros salvos aparecerão na sua página de Favoritos.</p>
+                </div>
+
+                <div class="pergunta-item">
+                    <h3 class="pergunta">Vocês vendem livros?</h3>
+                    <p class="resposta">Não vendemos livros diretamente, mas fornecemos links para compra na Amazon e outras livrarias parceiras.</p>
+                </div>
+
+                <div class="pergunta-item">
+                    <h3 class="pergunta">Como posso sugerir um livro?</h3>
+                    <p class="resposta">Use o formulário acima selecionando "Sugestão de livro" no assunto e nos conte qual livro você gostaria de ver no site!</p>
+                </div>
+
+                <div class="pergunta-item">
+                    <h3 class="pergunta">O site é gratuito?</h3>
+                    <p class="resposta">Sim! Todo o conteúdo do Dreamy Pages é totalmente gratuito. Nosso objetivo é promover a leitura e criar uma comunidade literária acolhedora.</p>
+                </div>
+            </div>
+
+            <div class="secao-redes">
+                <h2 class="titulo-secao">🌟 Conecte-se conosco</h2>
+                <p>Acompanhe nossas redes sociais para novidades, recomendações e muito mais!</p>
+                <div class="botoes-redes">
+                    <a href="#" class="btn-rede">Instagram</a>
+                    <a href="#" class="btn-rede">Twitter</a>
+                    <a href="#" class="btn-rede">Facebook</a>
+                    <a href="#" class="btn-rede">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Dreamy Pages - Seu refúgio literário</p>
+        <p class="email-footer">✉️ contato@dreamypages.com</p>
+    </footer>
+
+    <script>
+        document.getElementById('form-contato').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            document.getElementById('mensagem-sucesso').style.display = 'block';
+            this.reset();
+            
+            setTimeout(function() {
+                document.getElementById('mensagem-sucesso').style.display = 'none';
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
